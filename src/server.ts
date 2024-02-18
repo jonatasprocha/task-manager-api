@@ -10,7 +10,11 @@ const start = async () => {
     await server.register(routes)
 
     try {
-        await server.listen({ port: 3333 ?? process.env.PORT })
+        await server.listen({
+            host: '0.0.0.0',
+            port: 3333 ?? process.env.PORT,
+        })
+
     } catch (err) {
         process.exit(1)
     }
