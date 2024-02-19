@@ -51,8 +51,6 @@ Retorna uma lista de todas as tarefas.
 
 - **URL:** `/tasks`
 - **Método:** `GET`
-- **Parâmetros de Consulta:**
-  - `status` (opcional): Filtra as tarefas pelo seu status (por exemplo, "pendente", "concluída").
 - **Exemplo de Resposta:**
   ```json
   [
@@ -79,7 +77,7 @@ Retorna uma lista de todas as tarefas.
 
 Cria uma nova tarefa.
 
-- **URL:** `/tasks`
+- **URL:** `/task`
 - **Método:** `POST`
 - **Corpo da Requisição:**
   ```json
@@ -104,7 +102,7 @@ Cria uma nova tarefa.
 
 Retorna uma tarefa específica com base no ID fornecido.
 
-- **URL:** `/tasks/{id}`
+- **URL:** `/task/{id}`
 - **Método:** `GET`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa desejada.
@@ -124,7 +122,7 @@ Retorna uma tarefa específica com base no ID fornecido.
 
 Atualiza uma tarefa existente com base no ID fornecido.
 
-- **URL:** `/tasks/{id}`
+- **URL:** `/task/{id}`
 - **Método:** `PUT`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa a ser atualizada.
@@ -152,7 +150,7 @@ Atualiza uma tarefa existente com base no ID fornecido.
 
 Exclui uma tarefa existente com base no ID fornecido.
 
-- **URL:** `/tasks/{id}`
+- **URL:** `/task/{id}`
 - **Método:** `DELETE`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa a ser excluída.
