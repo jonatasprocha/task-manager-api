@@ -8,9 +8,9 @@ class DeleteTaskController {
 
         const deleteTaskModel = new DeleteTaskModel()
 
-        const deleteTask = await deleteTaskModel.execute({ id })
+        let deleteTask = await deleteTaskModel.execute({ id })
 
-        reply.send(deleteTask)
+        reply.status(deleteTask.status).send(deleteTask.message)
     }
 }
 

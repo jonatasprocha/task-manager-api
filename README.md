@@ -56,18 +56,22 @@ Retorna uma lista de todas as tarefas.
 - **Exemplo de Resposta:**
   ```json
   [
-    {
-      "id": 1,
-      "titulo": "Completar relatório",
-      "descricao": "Escrever relatório mensal de desempenho",
-      "status": "pendente"
-    },
-    {
-      "id": 2,
-      "titulo": "Revisar código",
-      "descricao": "Revisar o código antes de enviar para produção",
-      "status": "concluída"
-    }
+	{
+		"id": "65d2e82210b24cd360d23874",
+		"title": "Terminar trabalho final de web",
+		"description": "75% do trabalho já está encaminhado, mas restam muito pela frente.",
+		"completed": false,
+		"created_at": "2024-02-19T05:33:19.691Z",
+		"updated_at": "2024-02-19T05:33:19.691Z"
+	},
+	{
+		"id": "65d2e94d10b24cd360d23877",
+		"title": "Estudar React.js",
+		"description": "Estudar React.js, aprendendo a criar componentes reutilizáveis e gerenciar o estado da aplicação.",
+		"completed": false,
+		"created_at": "2024-02-19T05:38:19.407Z",
+		"updated_at": "2024-02-19T05:38:19.407Z"
+	}
   ]
   ```
 
@@ -80,18 +84,20 @@ Cria uma nova tarefa.
 - **Corpo da Requisição:**
   ```json
   {
-    "titulo": "Nova Tarefa",
-    "descricao": "Descrição da nova tarefa"
+    "title": "Nova Tarefa",
+    "description": "Descrição da nova tarefa"
   }
   ```
 - **Exemplo de Resposta:**
   ```json
-  {
-    "id": 3,
-    "titulo": "Nova Tarefa",
-    "descricao": "Descrição da nova tarefa",
-    "status": "pendente"
-  }
+  	{
+		"id": "65d2ea5810b24cd360d2387a",
+		"title": "Ir na aula de violão.",
+		"description": "Encontar amigos no centro da cidade para ir em um lugar reservado para treinar habilidades.",
+		"completed": true,
+		"created_at": "2024-02-19T05:42:48.558Z",
+		"updated_at": "2024-02-19T05:42:48.558Z"
+	}
   ```
 
 ### Obter Tarefa por ID
@@ -105,11 +111,13 @@ Retorna uma tarefa específica com base no ID fornecido.
 - **Exemplo de Resposta:**
   ```json
   {
-    "id": 1,
-    "titulo": "Completar relatório",
-    "descricao": "Escrever relatório mensal de desempenho",
-    "status": "pendente"
-  }
+		"id": "65d2e94d10b24cd360d23877",
+		"title": "Estudar React.js",
+		"description": "Estudar React.js, aprendendo a criar componentes reutilizáveis e gerenciar o estado da aplicação.",
+		"completed": false,
+		"created_at": "2024-02-19T05:38:19.407Z",
+		"updated_at": "2024-02-19T05:38:19.407Z"
+	},
   ```
 
 ### Atualizar Tarefa
@@ -123,19 +131,21 @@ Atualiza uma tarefa existente com base no ID fornecido.
 - **Corpo da Requisição:**
   ```json
   {
-    "titulo": "Tarefa Atualizada",
-    "descricao": "Nova descrição da tarefa",
-    "status": "concluída"
+    "title": "Tarefa Atualizada",
+    "description": "Nova descrição da tarefa",
+    "completed": true
   }
   ```
 - **Exemplo de Resposta:**
   ```json
   {
-    "id": 1,
-    "titulo": "Tarefa Atualizada",
-    "descricao": "Nova descrição da tarefa",
-    "status": "concluída"
-  }
+		"id": "65d2e82210b24cd360d23874",
+		"title": "Terminar trabalho final de web",
+		"description": "75% do trabalho já está encaminhado, mas restam muito pela frente.",
+		"completed": false,
+		"created_at": "2024-02-19T05:33:19.691Z",
+		"updated_at": "2024-02-19T05:33:19.691Z"
+	},
   ```
 
 ### Excluir Tarefa
@@ -154,7 +164,6 @@ Exclui uma tarefa existente com base no ID fornecido.
 - `201 Created`: Tarefa criada com sucesso.
 - `204 No Content`: Tarefa excluída com sucesso.
 - `400 Bad Request`: Requisição inválida ou mal formada.
-- `401 Unauthorized`: Não autorizado, token de acesso inválido ou ausente.
 - `404 Not Found`: Recurso não encontrado.
 - `500 Internal Server Error`: Erro interno do servidor.
 

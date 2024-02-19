@@ -10,7 +10,7 @@ class CreateTaskController {
 
         const task = await createTaskModel.execute({title, description})
 
-        reply.send(task)
+        await reply.status(task.status).send(task.message)
     }
 }
 

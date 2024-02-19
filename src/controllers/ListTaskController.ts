@@ -10,7 +10,7 @@ class ListTaskController {
 
         const task = await listTaskModel.execute({ id })
 
-        reply.send(task)
+        reply.status(task.status).send(task.message || task.listTask)
     }
 }
 
