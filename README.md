@@ -102,7 +102,7 @@ Cria uma nova tarefa.
 
 Retorna uma tarefa específica com base no ID fornecido.
 
-- **URL:** `/task/{id}`
+- **URL:** `/task?id=${id}`
 - **Método:** `GET`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa desejada.
@@ -122,7 +122,7 @@ Retorna uma tarefa específica com base no ID fornecido.
 
 Atualiza uma tarefa existente com base no ID fornecido.
 
-- **URL:** `/task/{id}`
+- **URL:** `/task?id=${id}`
 - **Método:** `PUT`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa a ser atualizada.
@@ -150,7 +150,7 @@ Atualiza uma tarefa existente com base no ID fornecido.
 
 Exclui uma tarefa existente com base no ID fornecido.
 
-- **URL:** `/task/{id}`
+- **URL:** `/task?id=${id}`
 - **Método:** `DELETE`
 - **Parâmetros de Caminho:**
   - `id`: O ID da tarefa a ser excluída.
@@ -173,4 +173,3 @@ Exclui uma tarefa existente com base no ID fornecido.
  # Licença
 
 Este projeto é licenciado sob os termos da Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
